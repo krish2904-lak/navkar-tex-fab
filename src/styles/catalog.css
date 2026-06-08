@@ -1,0 +1,175 @@
+/* ===== PAGE BASE ===== */
+.catalog-page {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #f6f6f6, #ffffff);
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* ===== HERO ===== */
+.catalog-hero {
+  padding: 180px 20px 100px;
+  text-align: center;
+}
+
+.catalog-hero h1 {
+  font-size: 3.5rem;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  color: #111;
+}
+
+.catalog-hero p {
+  color: #666;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+}
+
+/* ===== GRID ===== */
+.catalog-grid {
+  max-width: 1400px;
+  margin: auto;
+  padding: 0 60px 120px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 60px;
+}
+
+/* ===== CARD ===== */
+.catalog-card {
+  background: white;
+  border-radius: 8px;
+  padding: 80px 40px 60px;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.08);
+  transition: all 0.45s ease;
+  animation: riseUp 0.7s ease both;
+}
+
+@keyframes riseUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.catalog-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    transparent,
+    rgba(177, 0, 28, 0.18),
+    transparent
+  );
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+
+.catalog-card:hover::before {
+  opacity: 1;
+}
+
+.catalog-card:hover {
+  transform: translateY(-18px) scale(1.03);
+  box-shadow: 0 45px 90px rgba(0, 0, 0, 0.16);
+}
+
+/* ===== BRAND LOGO ===== */
+.brand-logo {
+  max-height: 60px;
+  margin-bottom: 35px;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.85;
+  transition: all 0.4s ease;
+}
+
+.catalog-card:hover .brand-logo {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: scale(1.08);
+}
+
+/* ===== TEXT ===== */
+.catalog-card h3 {
+  font-size: 1.9rem;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.catalog-card span {
+  font-size: 0.95rem;
+  letter-spacing: 1.5px;
+  color: #777;
+  text-transform: uppercase;
+}
+
+/* ===== BUTTON ===== */
+.view-btn {
+  margin-top: 30px;
+  display: inline-block;
+  padding: 12px 36px;
+  border: 1px solid #111;
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  transition: all 0.3s ease;
+}
+
+.catalog-card:hover .view-btn {
+  background: #111;
+  color: white;
+}
+
+/* ===== PDF OVERLAY ===== */
+.pdf-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.93);
+  z-index: 9999;
+  animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.pdf-overlay iframe {
+  width: 88%;
+  height: 88%;
+  margin: 4% auto;
+  display: block;
+  background: white;
+  border-radius: 6px;
+  box-shadow: 0 50px 120px rgba(0, 0, 0, 0.95);
+}
+
+/* ===== CLOSE BUTTON ===== */
+.close-btn {
+  position: absolute;
+  top: 30px;
+  right: 45px;
+  font-size: 2.6rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  opacity: 0.85;
+  transition: all 0.3s ease;
+}
+
+.close-btn:hover {
+  transform: rotate(90deg) scale(1.15);
+  opacity: 1;
+}

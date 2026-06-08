@@ -1,0 +1,92 @@
+.about-luxury {
+  background: #0e0e0e;
+  color: #eaeaea;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* CINEMA HERO */
+.about-cinema {
+  height: 100vh;
+  background: url("https://images.unsplash.com/photo-1583847268964-b28dc8f51f92")
+    center/cover no-repeat;
+  position: relative;
+}
+
+.cinema-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.cinema-overlay h1 {
+  font-size: 4.5rem;
+  letter-spacing: 4px;
+  color: #c9a24d;
+}
+
+.cinema-overlay h2 {
+  margin-top: 20px;
+  font-size: 1.4rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+/* STORY */
+.about-story {
+  max-width: 1400px;
+  margin: auto;
+  padding: 160px 80px;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 120px;
+  align-items: center;
+}
+
+.lux-tag {
+  color: #c9a24d;
+  letter-spacing: 3px;
+  font-size: 0.9rem;
+}
+
+.story-left h3 {
+  margin: 25px 0 30px;
+  font-size: 2.8rem;
+  line-height: 1.2;
+}
+
+.story-left p {
+  max-width: 520px;
+  opacity: 0.85;
+  line-height: 1.8;
+  margin-bottom: 18px;
+}
+
+.story-right img {
+  width: 100%;
+  border-radius: 6px;
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.7);
+}
+
+/* POWER STRIP */
+.about-power {
+  background: #111;
+  padding: 100px 40px;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.about-power h4 {
+  font-size: 3.8rem;
+  color: #c9a24d;
+}
+
+.about-power span {
+  letter-spacing: 2px;
+  opacity: 0.8;
+}
