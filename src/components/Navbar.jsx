@@ -25,7 +25,7 @@ export default function Navbar() {
 
         {/* CENTER BRAND */}
         <Link to="/" className="nav-brand">
-          <img src="/images/logo.png" alt="Navkar Tex Fab" />
+          <img src="logos/logo.png" alt="Navkar Tex Fab" />
           <span>NAVKAR TEX FAB</span>
         </Link>
 
